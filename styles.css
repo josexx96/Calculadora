@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Altura completa de la pantalla */
+    margin: 0;
+}
+
+/* Contenedor principal */
+.calculator {
+    background-color: #006055;
+    border: 5px solid black; /* Borde negro */
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 10px 15px rgba(0, 10, 10, 10.10); /* Sombra flotante */
+    width: 300px; /* Ancho del contenedor */
+    padding: 30px; /* Espaciado interno */
+}
+
+/* Pantalla de la calculadora */
+.calculator-screen {
+    display: block; /* Asegura que sea un bloque */
+    margin: 0 auto 20px auto; /* Centrar horizontalmente */
+    width: 90%; /* Ajusta el ancho para que no quede tan pegada a los bordes */
+    height: 50px;
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: right;
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(8, 8, 4, 8.8); /*Sombra de la pantalla*/
+}
+
+/* Botones */
+.calculator-buttons {
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 10px;
+}
+
+.btn {
+    height: 50px;
+    background-color: #1ba3ad;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: inset 0 2px 5px rgb(0, 0, 0, 8);
+}
+
+.btn:hover {
+    background-color: #296593;
+}
+
+/* Estilo especial para el boton "0" */
+.zero {
+    grid-column: span 2; /* Ocupa 2 columnas */
+}
+
+/* Botones de operacion */
+[data-action="clear"] {
+    background-color: #dc3545;
+}
+
+[data-action="clear"]:hover {
+    background-color: #a71d2a;
+}
+
+[data-action="equals"] {
+    background-color: #757976;
+    grid-column: span 2; /* Ocupa dos columnas */
+}
+
+[data-action="equals"]:hover {
+    background-color: #1c7430;
+}
